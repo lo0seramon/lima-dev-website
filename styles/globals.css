@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  @apply bg-light text-dark antialiased;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .bg-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:-translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors;
+  }
+}
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glass Effect */
+.glass {
+  @apply backdrop-blur-md bg-white/70 border border-white/20;
+}
