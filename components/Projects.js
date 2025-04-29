@@ -89,7 +89,7 @@ const Projects = () => {
   const filters = ['all', 'web', 'mobile', 'design'];
 
   return (
-    <section id="projects" className="py-20 bg-light relative overflow-hidden">
+    <section id="projetos" className="py-20 bg-light relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-1/4 top-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl"></div>

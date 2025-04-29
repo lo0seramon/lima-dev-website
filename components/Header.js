@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gradient">
-            Lima.dev
+            dev13
           </Link>
           
           <button
