@@ -14,20 +14,20 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Your Name - Portfolio</title>
+        <title>Ramon Lima - dev13</title>
         <meta name="description" content="Professional portfolio of Your Name - Full Stack Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Your Name - Portfolio" />
+        <meta property="og:title" content="Ramon Lima - dev13" />
         <meta property="og:description" content="Professional portfolio of Your Name - Full Stack Developer" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/og-image.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Your Name - Portfolio" />
+        <meta name="twitter:title" content="Ramon Lima - dev13" />
         <meta name="twitter:description" content="Professional portfolio of Your Name - Full Stack Developer" />
         <meta name="twitter:image" content="/og-image.jpg" />
       </Head>
@@ -44,7 +44,7 @@ export default function Home() {
 
       <footer className="bg-dark text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ramon Lima. All rights reserved.</p>
         </div>
       </footer>
     </div>

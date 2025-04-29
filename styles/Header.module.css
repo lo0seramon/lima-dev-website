@@ -1,0 +1,165 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s;
+}
+
+.headerScrolled {
+  composes: header;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.headerTransparent {
+  composes: header;
+  background-color: transparent;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menuButton {
+  display: block;
+  position: relative;
+  z-index: 50;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuButtonInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menuBar {
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: #1f2937;
+  transition: all 0.3s;
+}
+
+.menuBarTop {
+  composes: menuBar;
+  transform: translateY(-0.25rem);
+}
+
+.menuBarTopOpen {
+  composes: menuBar;
+  transform: translateY(0.375rem) rotate(45deg);
+}
+
+.menuBarMiddle {
+  composes: menuBar;
+}
+
+.menuBarMiddleOpen {
+  composes: menuBar;
+  opacity: 0;
+}
+
+.menuBarBottom {
+  composes: menuBar;
+  transform: translateY(0.25rem);
+}
+
+.menuBarBottomOpen {
+  composes: menuBar;
+  transform: translateY(-0.375rem) rotate(-45deg);
+}
+
+.desktopMenu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItemText {
+  color: rgba(31, 41, 55, 0.8);
+  transition: color 0.3s;
+}
+
+.menuItemText:hover {
+  color: rgb(31, 41, 55);
+}
+
+.menuItemUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: #2563eb;
+  transition: all 0.3s;
+}
+
+.menuItem:hover .menuItemUnderline {
+  width: 100%;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 40;
+}
+
+.mobileMenuItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
+}
+
+.mobileMenuItem {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1f2937;
+  transition: color 0.3s;
+}
+
+.mobileMenuItem:hover {
+  color: #3b82f6;
+}
